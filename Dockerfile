@@ -2,8 +2,10 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
 RUN pip install flask
 
-CMD ["python","app.py"]
+EXPOSE 80
+
+CMD ["python", "app.py"]
